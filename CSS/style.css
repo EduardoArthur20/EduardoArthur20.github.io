@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input, form select, form button, form label {
+  padding: 8px;
+  font-size: 14px;
+}
+
+#filterInput {
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+tr.details {
+  display: none;
+  background: #f0f0f0;
+}
+
+tr.details.open {
+  display: table-row;
+}
+
+button.remove-btn {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+button.remove-btn:hover {
+  background: #c0392b;
+}
+
+#dashboard {
+  margin-top: 40px;
+}

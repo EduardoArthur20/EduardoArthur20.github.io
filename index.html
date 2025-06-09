@@ -2,35 +2,39 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Inventário de Equipamentos</title>
-<link rel="stylesheet" href="CSS/Untitled-1.css">
+<title>PG Prime Inventário</title>
 <link rel="stylesheet" href="CSS/style.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 <div class="container">
-  <h1>Inventário de Equipamentos</h1>
+  <h1>PG Prime Inventário</h1>
 
-  <section id="cadastro">
-    <h2>Novo Cadastro</h2>
-    <form id="equipForm">
-      <input type="text" name="nome" placeholder="Colaborador" required>
-      <input type="text" name="loja" placeholder="Loja" required>
-      <input type="text" name="setor" placeholder="Setor" required>
-      <input type="text" name="funcao" placeholder="Função" required>
-      <select name="tipo" required>
-        <option value="">Tipo de Equipamento</option>
-        <option value="Notebook">Notebook</option>
-        <option value="Impressora">Impressora</option>
-        <option value="Outro">Outro</option>
-      </select>
-      <input type="date" name="data" required>
-      <input type="text" name="patrimonio" placeholder="Patrimônio" required>
-      <label>Foto: <input type="file" name="foto" accept="image/*"></label>
-      <label>Termo assinado: <input type="file" name="termo" accept="application/pdf,image/*"></label>
-      <button type="submit">Cadastrar</button>
-    </form>
-  </section>
+  <button id="newEntryBtn">Novo Cadastro</button>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2>Novo Equipamento</h2>
+      <form id="equipForm">
+        <input type="text" name="nome" placeholder="Colaborador" required>
+        <input type="text" name="loja" placeholder="Loja" required>
+        <input type="text" name="setor" placeholder="Setor" required>
+        <input type="text" name="funcao" placeholder="Função" required>
+        <select name="tipo" required>
+          <option value="">Tipo de Equipamento</option>
+          <option value="Notebook">Notebook</option>
+          <option value="Impressora">Impressora</option>
+          <option value="Outro">Outro</option>
+        </select>
+        <input type="date" name="data" required>
+        <input type="text" name="patrimonio" placeholder="Patrimônio" required>
+        <label>Foto: <input type="file" name="foto" accept="image/*"></label>
+        <label>Termo assinado: <input type="file" name="termo" accept="application/pdf,image/*"></label>
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+  </div>
 
   <section id="search">
     <input type="text" id="filterInput" placeholder="Pesquisar colaborador...">

@@ -1,6 +1,16 @@
 let equipments = JSON.parse(localStorage.getItem('equipments') || '[]');
 let nextId = parseInt(localStorage.getItem('nextId') || '1');
 
+const modal = document.getElementById('modal');
+const newEntryBtn = document.getElementById('newEntryBtn');
+const closeModal = document.getElementById('closeModal');
+
+newEntryBtn.addEventListener('click', () => modal.classList.add('show'));
+closeModal.addEventListener('click', () => modal.classList.remove('show'));
+window.addEventListener('click', e => {
+  if (e.target === modal) modal.classList.remove('show');
+});
+
 function readFileAsDataURL(file) {
   return new Promise(resolve => {
     if (!file) return resolve('');
@@ -83,6 +93,7 @@ async function handleSubmit(e) {
   equipments.push(equipment);
   updateStorage();
   e.target.reset();
+  modal.classList.remove('show');
   renderTable();
   updateChart();
 }
